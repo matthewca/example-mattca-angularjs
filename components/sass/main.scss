@@ -1,0 +1,368 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,500);
+@import url(http://fonts.googleapis.com/css?family=Lora:400,700);
+hr.clear
+{ /* used due to clearing problem in ie7 */
+	background: none;
+	border: 0;
+	clear: both;
+	display: block;
+	float: none;
+	font-size: 0;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+html, body
+{
+	background-color: #222;
+}
+body
+{
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	min-width: 1030px;
+}
+#content, #header
+{
+	left: 0px;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+#wrapper
+{
+	width: 100%;
+	height: 100%;
+	position: relative
+}
+header
+{
+	background-color: #222;
+	border-bottom-color: #333;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+}
+header.shadow
+{
+	box-shadow: 0 6px 4px -4px rgba(0,0,0,0.4);
+}
+#logo
+{
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 40px;
+	font-weight: 500;
+	color: #FFF;
+	text-align: center;
+	padding: 25px 0;
+	/*line-height: 40px;*/
+	height: 40px;
+	cursor: default;
+}
+#logo span
+{
+	color: #BBB;
+	font-weight: 400;
+}
+#logo img
+{
+	padding-top: 3px;
+	height: 34px;
+}
+#more-button
+{
+	background-image: url(../img/more-button.png);
+	background-size: 27px 24px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	position: absolute;
+	width: 96px;
+	height: 90px;
+	top: 4px;
+	top: 0;
+	left: 0;
+}
+#content
+{
+	padding-top: 129px;
+	z-index: 1;
+	position: relative;
+	left: 0;
+	background-color: #222;
+	background-image: url(../img/background-stripes.gif);
+}
+#content.open, #header.open
+{
+	left: 260px;
+}
+#content>div
+{
+	width: 960px;
+	margin: 0 auto;
+}
+#main-view, #content article
+{
+	width: 662px;
+	float: left;
+}
+#main-view h1, #feedback h1, #content article h1
+{
+	color: #FFF;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 16px;
+	margin-bottom: 32px;
+}
+#main-view>p 
+{
+	color: #FFF;
+	font-family: "myriad-pro", sans-serif;
+	font-size: 16px;
+	line-height: 1.4;
+	margin-bottom: 1em;
+	margin-right: 33px;
+}
+#main-view>p a {
+	color: #FFF;
+	text-decoration: underline;
+}
+#main-view>p:last-of-type {
+	margin-bottom: 63px;
+}
+#main-view>div
+{
+	background-color: #222;
+	border-color: #BBB;
+	border-width: 1px;
+	border-style: solid;
+	position: relative;
+	cursor: pointer;
+	background-size: 200% auto;
+	-webkit-transition: background-position 0.4s ease-in-out;
+	-moz-transition: background-position 0.4s ease-in-out;
+	-o-transition: background-position 0.4s ease-in-out;
+	-ms-transition: background-position 0.4s ease-in-out;
+	transition: background-position 0.4s ease-in-out;
+	float: left;
+	width: 296px;
+	padding-top: 222px;
+	margin-bottom: 63px;
+	margin-right: 33px;
+}
+#main-view>div:nth-of-type(odd)
+{
+	clear: left;
+}
+#main-view>div>h2
+{
+	background-color: #FFF;
+	color: #222;
+	font-family: "myriad-pro", sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 1;
+	padding: 6px 6px 4px 6px;
+}
+#main-view>div>p
+{
+	background-color: #FFF;
+	color: #333;
+	font-family: "myriad-pro", sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	padding: 0px 6px 7px 6px;
+	width: 284px;
+}
+#main-view>div>p>span
+{
+	font-weight: bold;
+}
+#tvlinks
+{
+	background-image: url(../img/gallery-tvlinks.png);
+	background-position: left top;
+}
+.no-touch #tvlinks:hover
+{
+	background-position: right top;
+}
+#marketstv
+{
+	background-image: url(../img/gallery-marketstv.png);
+	background-position: left top;
+}
+.no-touch #marketstv:hover
+{
+	background-position: right top;
+}
+#twit-live
+{
+	background-image: url(../img/gallery-twit-live.png);
+	background-position: left top;
+}
+.no-touch #twit-live:hover
+{
+	background-position: right top;
+}
+#weight-tracker
+{
+	background-image: url(../img/gallery-weight-tracker.png);
+	background-position: left top;
+}
+.no-touch #weight-tracker:hover
+{
+	background-position: right top;
+}
+#cargo-vans
+{
+	background-image: url(../img/gallery-cargovansca.png);
+	background-position: left top;
+}
+.no-touch #cargo-vans:hover
+{
+	background-position: right top;
+}
+#feedback
+{
+	padding-bottom: 50px;
+	width: 298px;
+	float: left;
+}
+#feedback p.date:nth-of-type(1)
+{
+	margin-top: 0;
+}
+#feedback p.date
+{
+	font-family: "museo-slab", serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 300;
+	color: #00BFFF;
+	margin-top: 34px;
+}
+#feedback h3
+{
+	font-family: "myriad-pro", sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	color: #FFF;
+	margin-bottom: 10px;
+}
+#feedback p.quote
+{
+	font-family: 'Lora', serif;
+	font-size: 18px;
+	color: #BBB;
+	line-height: 1.4;
+}
+#feedback p.version
+{
+	font-family: "myriad-pro", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #BBB;
+	font-style: italic;
+}
+#feedback p.version a
+{
+	color: #BBB;
+	font-weight: 600;
+	text-decoration: underline;
+}
+#contact
+{
+	background-color: #F1F1F1;
+	height: 100%;
+	position: fixed;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	/*box-shadow: inset -3px 0px 3px rgba(0,0,0,0.2);*/
+	text-align: center;
+	opacity: 0;
+	-webkit-transition: all 0s 0.4s;
+	-moz-transition: all 0s 0.4s;
+	-o-transition: all 0s 0.4s;
+	-ms-transition: all 0s 0.4s;
+	transition: all 0s 0.4s;
+	width: 260px;
+}
+#contact.open
+{
+	opacity: 1;
+	-webkit-transition: all 0s 0s;
+	-moz-transition: all 0s 0s;
+	-o-transition: all 0s 0s;
+	-ms-transition: all 0s 0s;
+	transition: all 0s 0s;
+}
+#contact h1
+{
+	display: none;
+}
+#contact p
+{
+	margin-bottom: 50px;
+}
+#contact p a
+{
+	font-family: 'Lora', serif;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 1;
+	color: rgb(162,162,162);
+	text-align: left;
+	text-decoration: none;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+	font-size: 34px;
+}
+#contact p.current a, #contact p.current a:hover, #contact p.current a span
+{
+	color: #222;
+	opacity: 1;
+}
+#contact p a span {
+	opacity: 0;
+}
+#contact p a:hover
+{
+	color: #00BFFF
+}
+#contact p a:visted {
+	color: rgb(162,162,162);
+}
+#contact div
+{
+	display: inline-block;
+	text-align: left;
+	margin-top: 97px;
+}
+footer p
+{
+	padding-bottom: 32px;
+}
+footer p, footer p a
+{
+	text-decoration: none;
+	color: #BBBBBB;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 16px;
+}

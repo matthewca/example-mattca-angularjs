@@ -1,0 +1,47 @@
+<!doctype html>
+<html data-ng-app="mattca" data-no-touch>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="robots" content="noindex">
+		<title>AngularJS Test | Matt.ca</title>
+		<script src="//use.typekit.net/fiw4hcg.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
+		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.8.0/build/cssreset/cssreset-min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/main.min.css">
+		<script src="http://code.jquery.com/jquery-latest.min.js" ></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js"></script>
+		<script src="assets/js/lib/angular-resource.min.js"></script>
+		<script src="assets/js/mattca.min.js"></script>
+	</head>
+	<body data-ng-controller="AppCtrl">
+		<div id="wrapper">
+			<header data-ng-class="{'open':isMorePanelOpen}" data-click-scroll-top data-window-scroll id="header">
+				<h1 id="logo"><img src="assets/img/mattca.png" height="34" alt="Matt.ca Logo"></h1>
+				<div id="more-button" data-ng-click="toggleMore(); $event.stopPropagation()"></div>
+			</header>
+			<section data-ng-class="{'open':isMorePanelOpen}" id="contact">
+				<h1>Contact Information</h1>
+				<div>
+					<p id="applications" data-ng-class="applicationsCurrent"><a href="#/applications" data-click-scroll-top>Applications <span>&rsaquo;</span></a></p>
+					<p id="services" data-ng-class="servicesCurrent"><a href="#/services" data-click-scroll-top>Services <span>&rsaquo;</span></a></p>
+					<p id="blog"><a href="https://github.com/matthewca/">GitHub</a></p>
+					<p id="email"><a href="mailto:info@matt.ca">Contact Us</a></p>
+				</div>
+			</section>
+			<div data-ng-class="{'open':isMorePanelOpen}" id="content">
+				<div>
+					<section data-ng-view id="main-view"></section>
+					<section data-ng-include src="sideBarURL" id="feedback"></section>
+					<hr class="clear">
+					<footer>
+						<p data-ng-cloak>&copy; {{date | date:'yyyy'}} <a href="http://www.matt.ca">Matt.ca</a>, <a href="http://www.matthew.ca">Matthew.ca</a>. All rights reserved.</p>
+					</footer>
+					<hr class="clear">
+				</div>
+			</div>
+		</div>
+		<!--livereload.js is used by grunt-contrib-watch for development purposes only-->
+		<script src="http://localhost:35729/livereload.js"></script>
+	</body>
+</html>
